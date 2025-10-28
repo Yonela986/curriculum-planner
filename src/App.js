@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { CurriculumProvider } from "./context/CurriculumContext";
+import CohortDashboard from "./components/CohortDashboard";
+import CurriculumPlanner from "./components/CurriculumPlanner";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CurriculumProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<CohortDashboard />} />
+          <Route path="/planner/:cohortId" element={<CurriculumPlanner />} />
+          <Route
+            path="*"
+            element={
+              <div style={{ padding: "2rem" }}>
+                <h2>404 - Page Not Found</h2>
+              </div>
+            }
+          />
+        </Routes>
+      </Router>
+    </CurriculumProvider>
   );
 }
 
