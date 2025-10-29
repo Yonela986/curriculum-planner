@@ -8,7 +8,7 @@ export const exportCurriculumDOCX = async (curriculum) => {
         children: [
           new Paragraph({ children: [new TextRun({ text: curriculum.title, bold: true })] }),
           ...curriculum.activities.map(
-            (a) => new Paragraph(`${a.type}: ${a.title} - ${a.date} (${a.mode})`)
+            (a) => new Paragraph(`${a.type}: ${a.title} - ${a.startDate} to ${a.endDate} (${a.mode})`)
           ),
         ],
       },

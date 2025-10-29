@@ -1,18 +1,19 @@
-/* App.css
-
-.app-container {
+.curriculum-container {
   background-color: white;
   color: navy;
-  min-height: 100vh;
   padding: 2rem;
   position: relative;
+  min-height: 100vh; /* Ensure footer images stick to bottom */
   font-family: Arial, sans-serif;
 }
 
-.app-container h1,
-.app-container h2,
-.app-container h3 {
+.curriculum-container h2,
+.curriculum-container h3 {
   color: red;
+}
+
+.activity-list li {
+  margin-bottom: 0.5rem;
 }
 
 .header-logo {
@@ -36,14 +37,3 @@
 .footer-right {
   right: 10px;
 }
-
-.nav-links a {
-  margin-right: 1rem;
-  color: navy;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: red;
-} */

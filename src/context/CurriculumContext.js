@@ -5,7 +5,8 @@ export const CurriculumContext = createContext();
 
 
 export const CurriculumProvider = ({ children }) => {
-  const [cohorts, setCohorts] = useState([]);
+  const [cohorts, setCohorts] = useState([]); //get cohort ID from URL
+ 
 
   useEffect(() => {
     const saved = localStorage.getItem("cohorts");
@@ -23,6 +24,7 @@ export const CurriculumProvider = ({ children }) => {
       curriculum: { id: uuid(), title: `${name} Curriculum`, activities: [] },
     };
     setCohorts([...cohorts, newCohort]);
+    return newCohort;
   };
 
   const addActivity = (cohortId, activity) => {

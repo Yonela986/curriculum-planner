@@ -1,0 +1,61 @@
+/* Single-page fixed layout */
+.app-container,
+.landing-container {
+  background-color: white;
+  color: navy;
+  font-family: Arial, sans-serif;
+  height: 30vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* header at top, footer at bottom */
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* logo to right */
+  align-items: center;
+  position: relative;
+}
+
+header img {
+  width: 300px; /* larger header logo */
+  max-width: 25%; /* scale for smaller screens */
+  height: auto;
+}
+
+main {
+  flex: 1; /* fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
+  align-items: center;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: red;
+  margin: 0.5rem 0;
+}
+
+p {
+  color: navy;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer img {
+   width: 150px; /* larger footer logos */
+  max-width: 30%; /* responsive */
+  height: auto;
+}
